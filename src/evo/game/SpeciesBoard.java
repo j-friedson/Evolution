@@ -5,7 +5,6 @@ import evo.Constants;
 import evo.game.list.CardList;
 import evo.game.list.SpeciesList;
 import evo.json.JUtils;
-//import evo.strategy.WorstTraitsFirst;
 
 import java.lang.reflect.Type;
 import java.util.*;
@@ -293,24 +292,6 @@ public class SpeciesBoard extends EvoElement {
             && bodySize >= Constants.MIN_BODY_SIZE && bodySize <= Constants.MAX_BODY_SIZE
             && foodSupply >= Constants.MIN_FOOD_SIZE && foodSupply <= populationSize;
   }
-
-//  public int worstTraitIdx() {
-//    if (traits.isEmpty()) throw new IllegalArgumentException("akdnv");
-//    CardList sorted = traits.makeCopy();
-//    sorted.sort(new WorstTraitsFirst());
-//    return traits.indexOf(sorted.get(0));
-//  }
-//
-//  public int worstTraitIdxButNot(TraitName tn) {
-//    if (traits.isEmpty()) throw new IllegalArgumentException("kfejlaksef");
-//    CardList sorted = traits.makeCopy();
-//    sorted.sort(new WorstTraitsFirst());
-//    for (int i = 0; i < traits.size(); i++)
-//      if (sorted.get(i).getName() != tn)
-//        return traits.indexOf(sorted.get(i));
-//
-//    throw new IllegalArgumentException("kheljvnlkse");
-//  }
 
   /******************
    * Getter methods *
