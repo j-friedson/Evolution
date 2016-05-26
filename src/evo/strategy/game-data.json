@@ -1,0 +1,27 @@
+{
+	"avgNumBoards": 1.6232876712328754,
+	"avgPopSize": 1.0928270042194084,
+	"avgBodySize": 0.2624472573839666,
+	"numBoardEntries": 730,
+	"numPopEntries": 1185,
+	"numBodyEntries": 1185,
+	"numTraitEntries": 2149,
+	"traitValueMap": {
+		"climbing": 62.6,
+		"fat-tissue": 109.5,
+		"foraging": 58.3,
+		"pack-hunting": 61.4,
+		"warning-call": 64.1,
+		"carnivore": 414.2,
+		"hard-shell": 121.1,
+		"horns": 96.4,
+		"long-neck": 507.3,
+		"herding": 104.7,
+		"scavenger": 179.8,
+		"ambush": 74.4,
+		"fertile": 77.6,
+		"symbiosis": 79.9,
+		"burrowing": 65.2,
+		"cooperation": 79.0
+	}
+}

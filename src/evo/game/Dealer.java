@@ -9,7 +9,7 @@ import evo.gui.Displayable;
 import evo.gui.View;
 import evo.json.JFactory;
 import evo.json.JUtils;
-//import evo.strategy.GameData;
+import evo.strategy.GameData;
 
 import java.lang.reflect.Type;
 import java.util.*;
@@ -118,21 +118,21 @@ public class Dealer extends EvoElement implements Displayable {
       System.exit(0);
     }
     else {
-//      saveGameData();
+      saveGameData();
       System.out.print(players.getGameResult());
       players.gameOver();
       System.exit(0);
     }
   }
 
-//  /**
-//   * todo
-//   */
-//  private void saveGameData() {
-//    GameData data = GameData.readDataFile();
-//    data.addData(players);
-//    data.saveToFile();
-//  }
+  /**
+   * todo
+   */
+  private void saveGameData() {
+    GameData data = GameData.readDataFile();
+    data.addData(players);
+    data.saveToFile();
+  }
 
   /**
    * Validates that this is a valid dealer configuration, according to the following constraints:
