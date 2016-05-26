@@ -1,0 +1,13 @@
+#!/bin/bash
+
+buildDir='out/production/Evolution'
+
+if ! [ -d $buildDir ]
+then mkdir $buildDir
+fi
+
+javac -cp ".:lib/gson-2.6.1.jar:lib/junit-4.12.jar:lib/guava-19.0.jar:lib/guava-19.0-sources.jar" \
+    -d $buildDir \
+	src/evo/*.java \
+	src/evo/*/*.java \
+	src/evo/*/*/*.java

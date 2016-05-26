@@ -1,0 +1,29 @@
+#!/bin/sh
+
+TESTDIR="test/evo/$1_test_files/"
+XFILE="java -cp "out/production/Evolution:lib/*" evo.TestHarnessMain $1"
+
+PASS=0
+FAIL=0
+
+for i in $( ls $TESTDIR | grep in.json ); do
+	IN=${i/#/$TESTDIR}
+	OUT=${IN/%in.json/out.json}
+	tr -d '[:space:]' <$OUT >tmpOut.txt
+	RESULT=$( $XFILE <$IN | diff -wB - tmpOut.txt )
+	NODIFF=""
+
+	if [ $RESULT = $NODIFF ]; then
+		echo $i passed!
+		((PASS++))
+	else
+		echo
+		echo $i failed with result:
+		echo "$RESULT"
+		echo
+		((FAIL++))
+	fi
+done
+echo $PASS tests passed
+echo $FAIL tests failed
+rm tmpOut.txt
