@@ -1,6 +1,6 @@
 # Evolution
 
-This is my version of the game Evolution, created for the class [Software Development](http://www.ccs.neu.edu/home/matthias/4500-s16/), as taught by [Matthias Felleisen](http://www.ccs.neu.edu/home/matthias/) in the spring of 2016. I took the class as a sophomore at Northeastern University and have been trying to maintain this as a personal project in my free time, although my lack of free time has made that slightly more challenging than I anticipated. 
+This is my version of the game Evolution, created for the class [Software Development](http://www.ccs.neu.edu/home/matthias/4500-s16/), as taught by [Matthias Felleisen](http://www.ccs.neu.edu/home/matthias/) in the spring of 2016. I took the class as a sophomore at Northeastern University and since then have been trying to maintain this as a personal project in my free time, although my lack of free time has made that slightly more challenging than I anticipated. 
 
 My current goals for the project are as follows:
   1. Finish writing appropriate documentation so the code base can be easily understood by someone brand new to it
@@ -27,17 +27,17 @@ Running the Code
 To compile the code:
 > ./compile
 
-To run the main (local) program:
+To run the main program:
 > ./xmain [3-8]
 
 Where [3-8] is an integer representing the number of players, between 3 and 8 (inclusive)
 
-To run the distributed program on the server machine:
+To run the distributed server program:
 > ./xserver [port]
 
 Where [port] is an optional argument specifying the port of the machine to be used (default is 45678)
 
-To run the distributed program on the client machine:
+To run the distributed client program:
 > ./xclient [host] [port]
 
 Where [host] is an optional argument specifying the host address to connect to (default is localhost), and [port] is an optional argument
