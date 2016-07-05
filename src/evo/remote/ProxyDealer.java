@@ -47,7 +47,7 @@ public class ProxyDealer {
       System.out.println("Could not connect to " + host + " at port " + port);
       disconnect();
       System.exit(-1);
-      throw new RuntimeException(); // <- to make the compiler stop yelling at me
+      throw new RuntimeException();
     }
   }
 
@@ -60,14 +60,11 @@ public class ProxyDealer {
   public void play() {
     try {
       signup();
-
       start();
       choose();
-      while (streamIsLive()) {
-        if (startOrFeedNext()) {
+      while (streamIsLive())
+        if (startOrFeedNext())
           choose();
-        }
-      }
     }
     catch (IOException e) { System.out.println(e.getMessage()); }
     finally { disconnect(); }

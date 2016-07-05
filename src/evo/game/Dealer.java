@@ -22,13 +22,14 @@ public class Dealer extends EvoElement implements Displayable {
   private PlayerList feedOrder;
   private final WaterHole wh;
 
-  private Dealer(PlayerList players, Deck deck, PlayerList feedOrder, WaterHole wh)
-          throws InvalidEvoElementException {
+  private Dealer(PlayerList players, Deck deck, PlayerList feedOrder,
+                 WaterHole wh) throws InvalidEvoElementException {
     this.players = players;
     this.deck = deck;
     this.feedOrder = feedOrder;
     this.wh = wh;
-    if (!isValid()) throw new InvalidEvoElementException("Invalid Dealer: " + toString());
+    if (!isValid()) throw new InvalidEvoElementException("Invalid Dealer: " +
+            toString());
   }
 
   /**
@@ -254,7 +255,6 @@ public class Dealer extends EvoElement implements Displayable {
     if (!getDeck().equals(dealer.getDeck())) return false;
     if (!getFeedOrder().equals(dealer.getFeedOrder())) return false;
     return wh.equals(dealer.wh);
-
   }
 
   @Override

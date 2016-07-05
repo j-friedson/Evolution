@@ -19,7 +19,8 @@ public class SpeciesBoard extends EvoElement {
   private final CardList traits;
   private int fatFood;
 
-  private SpeciesBoard(int foodSupply, int bodySize, int popSize, CardList traits, int fatFood)
+  private SpeciesBoard(int foodSupply, int bodySize, int popSize,
+                       CardList traits, int fatFood)
   throws InvalidEvoElementException {
     this.foodSupply = foodSupply;
     this.bodySize = bodySize;
